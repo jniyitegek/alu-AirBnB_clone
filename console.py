@@ -19,6 +19,7 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """
     Command interpreter for AirBnB clone project
+    Handles user input and calls storage methods.
     """
 
     prompt = "(hbnb) "
@@ -133,7 +134,7 @@ class HBNBCommand(cmd.Cmd):
             HBNBCommand.className[args[0]].save(obj)
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        """Exit the program when 'quit' is entered    """
         return True
 
     def do_EOF(self, arg):
